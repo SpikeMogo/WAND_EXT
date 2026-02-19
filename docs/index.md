@@ -98,6 +98,7 @@ Wand_Ext/
 ├── Wand_Ext.exe              Main application
 ├── bot_settings.ini          Settings (auto-created)
 ├── script/                   Lua scripts
+│   ├── dump_class.lua        API demo — prints all game data
 │   ├── Main.lua              Config script (one per class/level)
 │   ├── Main_*.lua            Class-specific configs
 │   └── scriptlib/            Shared bot modules

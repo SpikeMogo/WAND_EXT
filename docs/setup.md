@@ -110,6 +110,7 @@ The bundled `script/` folder contains a full hunting framework with class-specif
 Wand_Ext/
 ├── Wand_Ext.exe
 ├── script/
+│   ├── dump_class.lua        API demo — prints all game data
 │   ├── Main.lua              Generic config template
 │   ├── Main_*.lua            Class/level-specific configs
 │   └── scriptlib/            Shared bot modules

@@ -29,6 +29,33 @@ All Main scripts follow the same structure: load modules, configure settings, ca
 
 ---
 
+## Getting Started: dump_class.lua
+
+Before writing your own scripts, **run `dump_class.lua` first**. It's a read-only demo that calls most of the Lua API and prints everything to the log — player stats, mobs, drops, buffs, inventory, map geometry, NPCs, other players, pets, chat log, and dialog state.
+
+!!! tip "Start here"
+    Load `dump_class.lua` in Wand and hit Run. Read through the output to see what data is available and how each API function returns it. This is the fastest way to understand the API before writing your own scripts.
+
+It covers:
+
+| Section | API calls used |
+|---|---|
+| Player stats | `get_player()` — position, HP/MP, level, stats, state flags |
+| Mobs | `get_mobs()` — ID, name, HP%, position, platform |
+| Drops | `get_drops()` — item ID, owner, meso flag, position |
+| Buffs | `get_buffs()` — active buff IDs, remaining time, key bindings |
+| Inventory | `get_inventory()`, `get_inventory_tab()` — all tabs with item stats |
+| Map data | `get_physical_space()` — footholds, ropes, portals, platforms, bounds |
+| Other players | `get_other_players()` — name, job, party status, position |
+| NPCs | `get_npcs()` — ID, name, position |
+| Pets | `get_pets()` — name, fullness |
+| Chat log | `get_chatlog()` — recent messages |
+| Dialog | `get_dialog_text()` — NPC dialog options |
+
+The script makes no changes to game state — it only reads and prints. Use it as a reference when building your own scripts.
+
+---
+
 ## Script Library (scriptlib)
 
 The `scriptlib/` folder contains 10 modules:
