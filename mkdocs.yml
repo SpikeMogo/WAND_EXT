@@ -1,6 +1,8 @@
 site_name: Wand 3.0
 site_description: External automation tool for MapleStory v83
-site_url: ""
+site_url: https://spikemogo.github.io/WAND_EXT/
+repo_url: https://github.com/SpikeMogo/WAND_EXT
+repo_name: SpikeMogo/WAND_EXT
 
 theme:
   name: material

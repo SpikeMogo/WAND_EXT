@@ -1,10 +1,6 @@
 # MkDocs build output
 site/
 
-# Local distribution folders
-release/
-script/
-
 # Python
 __pycache__/
 *.py[cod]
