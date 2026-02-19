@@ -4,7 +4,7 @@
 
 ## Download
 
-Download `Wand_Ext.exe` from the [Releases](https://github.com/user/Wand_Ext/releases) page. Place it in any folder.
+Download `Wand_Ext.exe` from the [Releases](https://github.com/SpikeMogo/WAND_EXT/releases) page. Place it in any folder.
 
 The application requires `Wand_Ext.exe` along with the DPP library DLLs. All files must be in the same folder.
 

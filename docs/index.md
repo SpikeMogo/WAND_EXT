@@ -73,7 +73,7 @@ The upside of being fully external is that we don't have to worry about common c
 
 ## Quick Start
 
-1. Download `Wand_Ext.exe` from the [Releases](https://github.com/user/Wand_Ext/releases) page
+1. Download `Wand_Ext.exe` from the [Releases](https://github.com/SpikeMogo/WAND_EXT/releases) page
 2. Place it in any folder
 3. Run `Wand_Ext.exe`
 4. Select your MapleStory window from the dropdown
