@@ -36,6 +36,7 @@ nav:
   - Setup: setup.md
   - Usage: usage.md
   - Scripting: scripting.md
+  - Map Connections: map-connections.md
   - Lua API: lua-api.md
   - Discord: discord.md
   - Troubleshooting: troubleshooting.md

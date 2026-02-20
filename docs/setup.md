@@ -109,6 +109,7 @@ The bundled `script/` folder contains a full hunting framework with class-specif
 ```
 Wand_Ext/
 ├── Wand_Ext.exe
+├── MissingPortal.dat         Supplemental map connections
 ├── script/
 │   ├── dump_class.lua        API demo — prints all game data
 │   ├── Main.lua              Generic config template

@@ -1,0 +1,28 @@
+# MapleStory Missing Portal Definitions
+# Format: mapID, name, x, y, targetMapId
+# Example: Subway Ticketing Both to Subway
+# 103000100, manual_in, 200, 187, 103000101
+
+
+
+# ---- Subway Ticketing Both to Subway  ---
+103000100, manual_in,  195, 190,  103000101
+
+# ---- Ludibrium to Korean Folk Town -------
+# Helios tower 99 to elevator
+222020200, manual_in, -133, 1963, 222020210
+# wait in elevator
+222020210, dummy,    64, 127 , 222020211
+# wait in elevator to Helios tower 2
+222020211, dummy,     -72, 127,   222020100
+
+# ---- Korean Folk Town to Ludibrium -------
+# Helios tower 2 to elevator
+222020100, manual_in, -135, 290, 222020110
+# wait in elevator
+222020110, dummy,     59, 127,  222020111
+# wait in elevator
+222020111, dummy,     -72, 127,  222020200
+
+# ---- sleepy hotel to Sauna
+105040400, npc_talk, -284, 292, 105040401

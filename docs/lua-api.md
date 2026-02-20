@@ -20,7 +20,7 @@ log_info("Level " .. p.level .. " at (" .. p.x .. ", " .. p.y .. ")")
 | Field | Type | Description |
 |---|---|---|
 | `x`, `y` | int | Map position |
-| `vx`, `vy` | int | Velocity |
+| `vx`, `vy` | float | Velocity |
 | `hp`, `mp` | int | Current HP/MP |
 | `maxHp`, `maxMp` | int | Max HP/MP |
 | `exp` | int | Current EXP |

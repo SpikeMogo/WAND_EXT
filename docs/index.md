@@ -97,6 +97,7 @@ See the [Setup](setup.md) page for detailed instructions.
 Wand_Ext/
 ├── Wand_Ext.exe              Main application
 ├── bot_settings.ini          Settings (auto-created)
+├── MissingPortal.dat         Supplemental map connections
 ├── script/                   Lua scripts
 │   ├── dump_class.lua        API demo — prints all game data
 │   ├── Main.lua              Config script (one per class/level)

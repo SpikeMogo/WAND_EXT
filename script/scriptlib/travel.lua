@@ -19,23 +19,7 @@ local function NPC_Talk(mapID, portal)
     local key = get_virtual_key(0x05, 54)
 
     print(mapID, portal.toMapId)
-    if mapID == 2000000 and portal.toMapId == 104000000 then
-        print("[Travel] NPC: Southperry to Lith Harbor")
-
-        send_key(key) sleep(1000)
-        local dialog = get_dialog_text()
-
-        if #dialog ==0 then
-            print("[Travel] NPC: Dialog Error")
-            return 0
-        end
-
-        send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200) 
-        send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200) 
-        send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200) 
-
-        sleep(module.portalDelay)
-    end
+    
 
 
     if mapID == 105040400 and portal.toMapId == 105040401 then
@@ -55,124 +39,6 @@ local function NPC_Talk(mapID, portal)
 
         sleep(module.portalDelay)
     end
-
-
-
-    ---- SubWay to NLC ------
-    if mapID == 103000100 and portal.toMapId == 600010004 then
-        print("[Travel] NPC: Subway to NLC")
-
-        send_key(key) sleep(2000)
-        local dialog = get_dialog_text()
-
-        if #dialog ==0 then
-            print("[Travel] NPC: Dialog Error 1")
-            return 0
-        end
-        
-        print("[Travel] Buy Ticket")
-        send_key(key) sleep(1000)
-        send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200) 
-
-
-        local player = get_player()
-        local newx = player.x+810
-        local walkStart = os.clock() * 1000
-        press_key(vk.VK_RIGHT)
-        while(math.abs(player.x - newx)>5 ) do
-            player = get_player()
-            sleep(10)
-            if (os.clock() * 1000) - walkStart > module.walkTimeoutMs then
-                print("[Travel] Walk timeout, giving up")
-                stop_move()
-                return 0
-            end
-        end
-        stop_move()
-
-
-        local space = get_physical_space()
-        local waitStart = os.clock() * 1000
-        while(space.mapId~=600010004) do
-            print("[Travel] Leave")
-            send_key(key) sleep(2000)
-            local dialog = get_dialog_text()
-
-            if #dialog ==0 then
-                print("[Travel] NPC: Dialog Error 2")
-                return 0
-            end
-            send_key(key) sleep(2000)
-
-            send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200)
-
-            sleep(5000)
-            space = get_physical_space()
-            if (os.clock() * 1000) - waitStart > module.mapWaitTimeoutMs then
-                print("[Travel] Map transition timeout")
-                return 0
-            end
-        end
-    end
-
-    ----  NLC to Subway------
-    if mapID == 600010001 and portal.toMapId == 600010002 then
-        print("[Travel] NPC: Subway to NLC")
-
-        send_key(key) sleep(1000)
-        local dialog = get_dialog_text()
-
-        if #dialog ==0 then
-            print("[Travel] NPC: Dialog Error 1")
-            return 0
-        end
-        
-        print("[Travel] Buy Ticket")
-        send_key(key) sleep(2000)
-        send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200) 
-
-
-        local player = get_player()
-        local newx = player.x-170
-        local walkStart = os.clock() * 1000
-        press_key(vk.VK_LEFT)
-        while(math.abs(player.x - newx)>5 ) do
-            player = get_player()
-            sleep(10)
-            if (os.clock() * 1000) - walkStart > module.walkTimeoutMs then
-                print("[Travel] Walk timeout, giving up")
-                stop_move()
-                return 0
-            end
-        end
-        stop_move()
-
-
-        local space = get_physical_space()
-        local waitStart = os.clock() * 1000
-        while(space.mapId~=600010002) do
-
-            print("[Travel] Leave")
-            send_key(key) sleep(2000)
-            local dialog = get_dialog_text()
-
-            if #dialog ==0 then
-                print("[Travel] NPC: Dialog Error 2")
-                return 0
-            end
-
-            send_key(vk.VK_RIGHT) sleep(200)  send_key(vk.VK_RETURN) sleep(200)
-
-            sleep(5000)
-            space = get_physical_space()
-            if (os.clock() * 1000) - waitStart > module.mapWaitTimeoutMs then
-                print("[Travel] Map transition timeout")
-                return 0
-            end
-        end
-    end
-
-
     return 1
 
 end
