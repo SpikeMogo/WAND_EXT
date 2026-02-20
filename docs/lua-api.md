@@ -556,6 +556,41 @@ play_notify("Script finished")   -- sound + Discord notification
 
 ---
 
+## Image Matching
+
+### `find_image(path)`
+
+Search for a template image inside the game window. Returns the **center coordinates** of the best match, or `nil` if no match is found within the configured threshold.
+
+```lua
+local result = find_image("potion.bmp")
+if result then
+    log_info("Found at (" .. result.x .. ", " .. result.y .. ") confidence: " .. result.confidence)
+    click(result.x, result.y)
+end
+```
+
+**Returns:** `table` or `nil`
+
+| Field | Type | Description |
+|---|---|---|
+| `x` | int | Center X of the matched region (game window client coordinates) |
+| `y` | int | Center Y of the matched region (game window client coordinates) |
+| `confidence` | float | Match quality — 0.0 = perfect match, higher = worse |
+
+**Preparing a template:**
+
+1. Take a screenshot using the game's built-in screenshot function
+2. Open the screenshot and crop the section you want to locate (e.g., an item icon, a UI element)
+3. Save as **24-bit BMP** — this is the only supported format
+
+The path can be absolute or relative to the exe folder.
+
+!!! tip
+    The match threshold is configurable in the **Settings** tab under **Image Matching**. Default is 5. Lower values require a closer pixel match; higher values are more lenient but may cause false positives.
+
+---
+
 ## Utility
 
 ### `is_input_allowed()`
