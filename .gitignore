@@ -1,6 +1,9 @@
 # MkDocs build output
 site/
 
+# VS Code local history
+.history/
+
 # Python
 __pycache__/
 *.py[cod]
