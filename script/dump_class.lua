@@ -217,7 +217,7 @@ end
 print("All Npcs:")
 local npcs = get_npcs()
 for i, npc in ipairs(npcs) do
-    print(string.format("NPC[%d] id=%d name=%s pos=(%d,%d)", i, npc.id, npc.name, npc.xp, npc.yp))
+    print(string.format("NPC[%d] id=%d name=%s pos=(%d,%d)", i, npc.id, npc.name, npc.x, npc.y))
 end
 
 

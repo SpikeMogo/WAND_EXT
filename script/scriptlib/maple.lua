@@ -62,7 +62,7 @@ local module = {
     -- threshold: Use potion when HP/MP falls below this raw value
     hpPotion = { id = 2000000, minNum = 50, threshold = 50, buy = 200 },  -- Example: Red Potion
     mpPotion = { id = 2000001, minNum = 50, threshold = 30, buy = 200 },  -- Example: Blue Potion
-    petPotion = { id = 2120000, threshold = 30 },                         -- Pet food, feed when fullness < threshold
+    petPotion =  nil, --{ id = 2120000, threshold = 30 },   -- Pet food, feed when fullness < threshold
     potionCooldownMs = 300,         -- Minimum milliseconds between potion uses
     potionWarnIntervalMin = 1,
 
