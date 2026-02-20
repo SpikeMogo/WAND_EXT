@@ -294,9 +294,16 @@ send_key(0x51, 3)     -- send Q key 3 times
 |---|---|
 | `press_key(vk)` | Hold a key down |
 | `release_key(vk)` | Release a held key |
-| `hit_key(vk)` | Quick press and release (~20ms) |
-| `send_key(vk, repeat)` | Send key event. `repeat` defaults to 1 |
+| `hit_key(vk)` | Simulates a real key press and release (~20ms hold) |
+| `send_key(vk, repeat)` | Sends a key message event. `repeat` defaults to 1 |
 | `stop_move()` | Release all movement keys |
+
+!!! note "hit_key vs send_key"
+    **`hit_key`** simulates a physical key press — it calls `press_key` then `release_key` with a short delay. This is how a real keyboard input works and is required for **arrow keys** and movement. Use `press_key`/`release_key`/`hit_key` for movement controls.
+
+    **`send_key`** sends a window message event directly. It works well for most skill and item keys, but because it doesn't simulate a real press-release cycle, **some skills may behave differently** — for example, a skill that has a charge/hold mechanic may trigger a prolonged hold when using `send_key`.
+
+    If a key isn't responding as expected, try switching between the two.
 
 ### Mouse Functions
 
@@ -340,7 +347,10 @@ if key ~= 0 then hit_key(key) end
 
 ### `get_virtual_key(type, data)`
 
-General key lookup. Types: `1` = skill, `2` = item, `4` = UI action.
+General key lookup. Types: `1` = skill, `2` = item, `4`, `5`, `6` = UI and other functional actions.
+
+!!! tip
+    Run `dump_key_map()` in an empty script to print the full key map to the log. This shows every bound key with its type and data values — useful for finding the right parameters.
 
 ### `get_item_key(itemId)`
 
@@ -352,7 +362,7 @@ Remap a key binding. Automatically closes any open dialogs first.
 
 ### `dump_key_map()`
 
-Prints all key mappings for debugging.
+Prints all key mappings to the log, including the type and data for each bound key.
 
 ---
 
@@ -360,7 +370,7 @@ Prints all key mappings for debugging.
 
 ### `move_to(x, y)` / `move_to(mob)` / `move_to(drop)` / `move_to(portal)`
 
-Compute a path and move there. Accepts coordinates, a mob, a drop, or a portal object.
+Compute a path and move there. When possible, pass the object directly (mob, drop, or portal) rather than raw coordinates — this allows Wand to apply object-specific handling during movement. Use `move_to(x, y)` only when you need to move to a fixed location.
 
 ```lua
 -- Move to coordinates
