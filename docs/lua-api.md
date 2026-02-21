@@ -510,6 +510,22 @@ send_packet("1A 00 FF 00")
 !!! warning
     Sending invalid packets can disconnect you or trigger server-side detection. Use with caution.
 
+### `recv_packet(hexString)`
+
+Inject a fake server packet into the client. The client will process it as if it came from the server.
+
+```lua
+-- Example: inject a Ping packet (opcode 0x11)
+recv_packet("11 00")
+```
+
+| Return | Description |
+|--------|-------------|
+| `bool` | `true` if the packet was queued successfully |
+
+!!! warning
+    The client will handle this packet as a real server message. Injecting malformed packets may crash the client.
+
 ### `change_channel(channel)`
 
 Change to a specific channel number.
