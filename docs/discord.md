@@ -67,15 +67,38 @@ Go to the **Discord** tab in Wand and click **Connect**. The bot should come onl
 
 Use `/panel` to get an interactive button panel:
 
+**Row 1 — Main Controls**
+
 | Button | Color | Action |
 |---|---|---|
 | **Run** | Green | Start Lua script |
 | **Stop** | Red | Stop Lua script |
 | **Status** | Blue | Show player status |
 | **Screenshot** | Blue | Capture game window |
+
+**Row 2 — Extra Controls**
+
+| Button | Color | Action |
+|---|---|---|
 | **Chat Log** | Gray/Green | Toggle chat monitoring |
 | **Life** | Green | Show map entities |
 | **Kill** | Red | Terminate game process |
+
+**Row 3 & 4 — Chat Forward**
+
+Quick-toggle chat redirect without using `/chat`. The active type is highlighted green.
+
+| Button | Action |
+|---|---|
+| **Chat: Off / Chat: Stop** | Turn off chat redirect (red when active) |
+| **All** | Redirect to normal chat |
+| **Party** | Redirect to party chat |
+| **Guild** | Redirect to guild chat |
+| **Alliance** | Redirect to alliance chat |
+| **Whisper** | Opens a popup to enter the target player name |
+| **Spouse** | Redirect to spouse chat |
+
+Once a chat type is active, any message you send in the Discord channel will be forwarded in-game. Press **Chat: Stop** to disable.
 
 ---
 
