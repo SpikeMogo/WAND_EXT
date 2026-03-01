@@ -80,6 +80,8 @@ maple.removeDialog = true
 
 maple.hpPotion = { id = 2022003, minNum = 50, threshold = 2000,  buy = 1200 }  -- Use when HP < X
 maple.mpPotion = { id = 2000006, minNum = 50, threshold = 100 ,  buy = 500 }  -- Use when MP < X
+maple.petPotion =  nil --{ id = 2120000, threshold = 30 },   -- Pet food, feed when fullness < threshold
+
 maple.potionCooldownMs = 200
 
 

@@ -73,6 +73,7 @@ maple.alwaysEnsureInput = true -- will auto close any UI and dialog to make sure
 
 maple.hpPotion = nil -- Use when HP < X
 maple.mpPotion = nil  -- Use when MP < X
+maple.petPotion =  nil
 maple.potionCooldownMs = 200
 
 
@@ -91,6 +92,7 @@ shop.equipSlotBuffer = 1                -- Trigger sell when empty equip slots <
 shop.sellUSE = true
 shop.sellETC = true
 shop.sellAfterBuy = true                -- Also sell inventory after refill potions
+shop.useReturnScrollId = nil
 --------------------------------------------------------------------------------
 -- hunt settings
 --------------------------------------------------------------------------------

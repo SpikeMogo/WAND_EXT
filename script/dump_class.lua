@@ -243,3 +243,6 @@ for i, entry in ipairs(dialog) do
 end
 
 
+
+
+dump_key_map()

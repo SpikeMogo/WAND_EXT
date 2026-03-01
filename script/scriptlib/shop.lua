@@ -134,7 +134,7 @@ end
 
 local function handleIdle()
     module._needBuy = module._buyTriggered
-    module._needSell = module._sellTriggered or checkNeedSell()
+    module._needSell = module._sellTriggered
 
     if module._needBuy or module._needSell then
         module._state = "traveling"
