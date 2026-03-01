@@ -75,7 +75,7 @@ end
 | `id` | int | Mob template ID |
 | `x`, `y` | int | Position |
 | `name` | string | Mob name |
-| `HPP` | int | HP percentage (0-100) |
+| `HPP` | int | Current HP |
 | `maxHP` | int | Maximum HP |
 | `platform` | int | Platform ID the mob is on |
 
@@ -87,7 +87,7 @@ Returns all NPCs on the current map.
 |---|---|---|
 | `id` | int | NPC ID |
 | `x`, `y` | int | Position |
-| `xp`, `yp` | int | Direction |
+| `xp`, `yp` | int | Previous position |
 | `name` | string | NPC name |
 
 ### `get_other_players()`
@@ -109,7 +109,7 @@ Returns your active pets.
 
 | Field | Type | Description |
 |---|---|---|
-| `id` | int | Pet item ID |
+| `id` | int | Pet slot index (0/1/2) |
 | `name` | string | Pet name |
 | `fullness` | int | Fullness (0-100) |
 
