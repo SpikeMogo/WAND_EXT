@@ -619,6 +619,14 @@ The path can be absolute or relative to the exe folder.
 
 ## Utility
 
+### `sleep(ms)`
+
+Pause script execution for the given number of milliseconds. Supports early cancellation — if the script is stopped while sleeping, it will exit promptly.
+
+```lua
+sleep(1000)  -- wait 1 second
+```
+
 ### `is_input_allowed()`
 
 Returns `false` if player controls are blocked by other UIs (e.g. input box active, dialog UIs).
