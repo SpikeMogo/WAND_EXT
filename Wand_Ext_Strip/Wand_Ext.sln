@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wand_Ext", "Wand_Ext\Wand_Ext.vcxproj", "{EFD74E36-63A5-4D89-8150-AE766C164842}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Debug|x64.ActiveCfg = Debug|x64
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Debug|x64.Build.0 = Debug|x64
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Debug|x86.ActiveCfg = Debug|Win32
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Debug|x86.Build.0 = Debug|Win32
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Release|x64.ActiveCfg = Release|x64
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Release|x64.Build.0 = Release|x64
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Release|x86.ActiveCfg = Release|Win32
+		{EFD74E36-63A5-4D89-8150-AE766C164842}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FEE7FA6-4FC8-4146-A4D6-A84051ECB410}
+	EndGlobalSection
+EndGlobal

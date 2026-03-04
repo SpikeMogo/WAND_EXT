@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="S">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="S\imgui">
+      <UniqueIdentifier>{f66f3f90-524b-4dcb-beb9-f787224bad6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\imgui\backends">
+      <UniqueIdentifier>{0548d50a-d051-415b-ae05-f4f56f194464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\UI">
+      <UniqueIdentifier>{aa63655c-bd06-48e2-92d8-8e7d0f29b764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\navigator">
+      <UniqueIdentifier>{3873df16-ad1d-4a3a-a275-10d48ac1bad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\navigator\Movements">
+      <UniqueIdentifier>{9b1b5cdf-d00b-40ed-9474-adc41cc27498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\wzparser">
+      <UniqueIdentifier>{79f157c9-4ea8-4a80-8088-bf625cd83a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="S\miniz">
+      <UniqueIdentifier>{b533b9b1-3f3a-40f6-925a-eace59663f31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Wand.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui.cpp">
+      <Filter>S\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_demo.cpp">
+      <Filter>S\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_draw.cpp">
+      <Filter>S\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_tables.cpp">
+      <Filter>S\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\imgui_widgets.cpp">
+      <Filter>S\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>S\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>S\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabMain.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabMap.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabSetting.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MapleOffsets.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\UIMain.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabInventory.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ScriptEngine.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LuaBindings.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NtAsyncArrowHook.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GetFocusPtrHook.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\navigator\Map.cpp">
+      <Filter>S\navigator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\navigator\ConnectionMaker.cpp">
+      <Filter>S\navigator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\navigator\PathFinder.cpp">
+      <Filter>S\navigator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\navigator\MovePlayer.cpp">
+      <Filter>S\navigator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\navigator\Movements\MoveDynamicJump.cpp">
+      <Filter>S\navigator\Movements</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabWzBrowser.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wzparser\MapPathfinder.cpp">
+      <Filter>S\wzparser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wzparser\MapData.cpp">
+      <Filter>S\wzparser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miniz\miniz.c">
+      <Filter>S\miniz</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miniz\miniz_tdef.c">
+      <Filter>S\miniz</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miniz\miniz_tinfl.c">
+      <Filter>S\miniz</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miniz\miniz_zip.c">
+      <Filter>S\miniz</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CursorPosHook.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Settings.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GetForegroundPtrHook.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HardwareSpoof.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UI\TabDiscord.cpp">
+      <Filter>S\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DiscordBot.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DiscordCommands.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stb_image_write.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CNetwork.cpp">
+      <Filter>S</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
