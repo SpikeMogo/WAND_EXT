@@ -637,4 +637,4 @@ Force the game focus on the main window so player controls are not blocked.
 
 ### `revive_dead()`
 
-Interact with the death/revive NPC. Returns `true` on success.
+Check if player is dead, and revive the dead player. Returns `true` on success.
