@@ -30,7 +30,7 @@ Around 80% of WAND_EXT was written with AI assistance. All the addresses, offset
 
 The source of Wand Ext is available as a stripped open-source release:
 
-:material-link: [**github.com/SpikeMogo/WAND_EXT/tree/main/Wand_Ext_Strip**](https://github.com/SpikeMogo/WAND_EXT/tree/main/Wand_Ext_Strip)
+[**source**](https://github.com/SpikeMogo/WAND_EXT/tree/main/Wand_Ext_Strip)
 
 This is probably the most complete set of MapleStory v83 offsets and class definitions available as open source, and a solid platform for building your own tools:
 
