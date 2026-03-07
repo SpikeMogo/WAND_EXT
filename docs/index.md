@@ -26,6 +26,38 @@ Around 80% of WAND_EXT was written with AI assistance. All the addresses, offset
 
 ---
 
+## Open Source Release (Stripped)
+
+The source of Wand Ext is available as a stripped open-source release:
+
+:material-link: [**github.com/SpikeMogo/WAND_EXT/tree/main/Wand_Ext_Strip**](https://github.com/SpikeMogo/WAND_EXT/tree/main/Wand_Ext_Strip)
+
+This is probably the most complete set of MapleStory v83 offsets and class definitions available as open source, and a solid platform for building your own tools:
+
+- **Complete maple class headers** — CUserLocal, CUserPool, CMob, CMobPool, CDropPool, CStaticFoothold, CWvsPhysicalSpace2D, CFuncKeyMapped, and more
+- **Memory read utilities** — templated RPM helpers, pointer chain reading
+- **Lua scripting engine** — sol2-based, with bindings for all game classes
+- **Discord bot module** — fully functional remote control, slash commands, chat log forwarding, screenshots
+- **ImGui UI framework** — tabbed interface with map viewer, inventory, settings
+
+### What's stripped and why
+
+Input injection, packet functions, wz parser, and the pathfinder/navigator are stripped. Two reasons:
+
+1. Some methods are proprietary and sensitive
+2. To protect current Wand Ext users — leaking key features would lead to detection
+
+### What you can build with this
+
+You're given a complete set of v83 game state reading: player stats, position, mobs, footholds, ladder ropes, portals, inventory, NPCs, drops, buff/debuff states, and more. You can write your own automation in Lua, and with the map structure definitions included, I'm sure you can build something great — especially with the help of AI.
+
+I want to leave this community a foundation that promotes sharing, communication, and convenience. In the age of AI, everyone can create their own Wand.
+
+!!! warning "No support for the open-source release"
+    The Issues channel is for Wand Ext APP only, not for the open-source release. I will not accept questions, bug reports, or feature requests regarding the stripped source. I will not provide help understanding or modifying it. Please do not DM me about the source code.
+
+---
+
 ## About Being External
 
 Unlike WAND 2.0, which operated as an injected DLL inside the client, **WAND_EXT is fully external** — it runs as a separate process. This means we cannot sit inside the client's memory space or call game functions directly. Everything has to be done from the outside, which brings a unique set of challenges:
