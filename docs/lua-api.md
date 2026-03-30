@@ -617,6 +617,87 @@ The path can be absolute or relative to the exe folder.
 
 ---
 
+## UI Windows
+
+### `get_fade_wnd_types()`
+
+Returns a table of type IDs for all active CUIFadeYesNo windows (pop-up notifications). Returns an empty table if none are active.
+
+```lua
+local types = get_fade_wnd_types()
+for i, t in ipairs(types) do
+    log_info("Fade window " .. i .. " type: " .. t)
+end
+```
+
+**Type values:**
+
+| Type | Description |
+|------|-------------|
+| 0 | An invitation |
+| 1 | Buddy request |
+| 2 | Trade request |
+| 3 | Cash Trade invite |
+| 4 | (image only) |
+| 5 | Party invite |
+| 6 | Guild Alliance invite |
+| 7 | New Quest / Quest Complete / Got a title |
+| 8 | Guild invite |
+| 9 | Buddy logged in / Same channel |
+| 10 | Quick Delivery package |
+| 11 | Party Quest |
+| 12 | Family invitation |
+| 13 | New Year Card arrived |
+
+---
+
+## Memory Read/Write
+
+Direct memory access to the game process. Read functions return `nil` on failure. Write functions return `true`/`false`.
+
+### `rpm_int(address)`
+
+Read a 4-byte signed integer.
+
+```lua
+local val = rpm_int(0x00BE7918)
+if val then log_info("Value: " .. val) end
+```
+
+### `rpm_short(address)`
+
+Read a 2-byte signed short.
+
+### `rpm_byte(address)`
+
+Read a 1-byte unsigned value (returned as integer 0–255).
+
+### `rpm_float(address)`
+
+Read a 4-byte float.
+
+### `wpm_int(address, value)`
+
+Write a 4-byte signed integer. Returns `true` on success.
+
+```lua
+if wpm_int(addr, 100) then log_info("Written") end
+```
+
+### `wpm_short(address, value)`
+
+Write a 2-byte short.
+
+### `wpm_byte(address, value)`
+
+Write a 1-byte value.
+
+### `wpm_float(address, value)`
+
+Write a 4-byte float.
+
+---
+
 ## Utility
 
 ### `sleep(ms)`
