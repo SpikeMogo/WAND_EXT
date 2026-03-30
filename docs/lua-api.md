@@ -696,6 +696,65 @@ Write a 1-byte value.
 
 Write a 4-byte float.
 
+### Example: Reading drops with rpm
+
+This example shows how to traverse the CDropPool ZList using raw memory reads — the same thing `get_drops()` does internally.
+
+```lua
+-- Drop pool offsets
+local CDropPool_ptr   = 0x00BED6AC  -- pointer to CDropPool singleton
+local CDropPoolList   = 0x2C        -- ZList head offset on CDropPool
+local OFF_ID          = 0x34        -- item ID (or meso amount)
+local OFF_Gr2DLayer   = 0x38        -- pointer to IWzGr2DLayer
+local OFF_X           = 0x5C        -- x on Gr2DLayer
+local OFF_Y           = 0x60        -- y on Gr2DLayer
+
+-- ZList node layout:
+--   node + 4        = object pointer
+--   node - 16 + 4   = next link pointer (add +16 for next node)
+
+function read_drops()
+    local drops = {}
+
+    local pool = rpm_int(CDropPool_ptr)
+    if not pool or pool == 0 then return drops end
+
+    local pos = rpm_int(pool + CDropPoolList)
+    if not pos or pos == 0 then return drops end
+
+    for i = 1, 500 do  -- safety limit
+        if not pos or pos == 0 then break end
+
+        local dropAddr = rpm_int(pos + 4)
+        if dropAddr and dropAddr ~= 0 then
+            local id = rpm_int(dropAddr + OFF_ID)
+            local gr = rpm_int(dropAddr + OFF_Gr2DLayer)
+            local x, y
+            if gr and gr ~= 0 then
+                x = rpm_int(gr + OFF_X)
+                y = rpm_int(gr + OFF_Y)
+            end
+            if id then
+                table.insert(drops, { id = id, x = x or 0, y = y or 0 })
+            end
+        end
+
+        -- advance to next ZList node
+        local link = rpm_int(pos - 16 + 4)
+        if not link or link == 0 then break end
+        pos = link + 16
+    end
+
+    return drops
+end
+
+-- Usage:
+local drops = read_drops()
+for _, d in ipairs(drops) do
+    log_info(string.format("Drop id=%d at (%d, %d)", d.id, d.x, d.y))
+end
+```
+
 ---
 
 ## Utility
