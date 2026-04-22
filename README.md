@@ -34,8 +34,14 @@ WAND_EXT/
 └── mkdocs.yml      MkDocs configuration
 ```
 
-## Disclaimer
+## Legal Notice & Disclaimer
 
-This is a free, open-source project built purely for learning and experimentation. Just like WAND 1.0 and WAND 2.0, the author has never profited from this project and will never use WAND_EXT as a commercial product. It is not monetized, not sold, and not commercially distributed. If you paid for this, you were scammed.
+**This project exists strictly for educational and research purposes.**
 
-**Use at your own risk.** See the full [disclaimer](https://spikemogo.github.io/WAND_EXT/#disclaimer) for details.
+- **Non-commercial, forever.** The author has never profited from this project, and WAND_EXT will never be monetized, sold, licensed, or commercially distributed in any form. There is no premium tier, no paid version, no donation model. If anyone asked you to pay for this software, you were scammed.
+- **Targets obsolete v83 only.** All memory addresses, offsets, and class structures in this project target the legacy MapleStory v83 client — a version released around 2009 and no longer operated by the official publisher. This project does not target, support, or work with any currently-operated official game client.
+- **All data is from public sources.** Every address, offset, and structure definition was collected from publicly available online resources (forums, open-source repositories, reverse-engineering wikis that have existed for well over a decade). Nothing in this project is derived from private reverse engineering of current, protected, or actively-operated software. This repository is an aggregation for study.
+- **Not for use on official servers.** This tool is designed and documented for use on private learning/testing environments. The author does not condone, encourage, or support using this software in violation of any service's Terms of Service.
+- **Use at your own risk.** This software is provided *as-is*, with no warranty of any kind. The author assumes no liability for any consequences of its use — including account actions, data loss, or legal claims — and disclaims all responsibility arising from its distribution or use by others.
+
+See the full [disclaimer](https://spikemogo.github.io/WAND_EXT/#disclaimer) in the documentation.

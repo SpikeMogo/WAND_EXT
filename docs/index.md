@@ -73,18 +73,23 @@ The upside of being fully external is that we don't have to worry about common c
 
 ---
 
-## Disclaimer
+## Legal Notice & Disclaimer
 
-!!! warning "Disclaimer"
-    **This is a free, open-source project built purely for learning and experimentation.** Just like WAND 1.0 and WAND 2.0, the author has never profited from this project and will never use WAND_EXT as a commercial product. It is not monetized, not sold, and not commercially distributed. If you paid for this, you were scammed.
+!!! warning "Project Nature & Scope"
+    **This project exists strictly for educational and research purposes.** It is a personal study of game client internals and external automation techniques, built over the course of learning with AI-assisted development tools.
 
-    This software is provided **as-is, with no warranty of any kind**, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement.
+    - **Non-commercial, forever.** Just like WAND 1.0 and WAND 2.0, the author has never profited from this project and will never commercialize WAND_EXT in any form. It is not monetized, not sold, not licensed, and not commercially distributed. There is no paid version, no premium tier, no donation model. **If you paid for this software, you were scammed — the author receives no money.**
+    - **Targets legacy v83 only.** Every memory address, offset, and class definition in this project targets the **MapleStory v83 client**, a version originally released around 2009 and long since retired by the official publisher. This project does not target, support, or function against any currently-operated official game client.
+    - **All data is from public sources.** The addresses, offsets, and data structures were collected from publicly available online resources — community forums, open-source repositories, and reverse-engineering documentation that has existed on the public internet for well over a decade. Nothing here comes from private reverse engineering of current, actively-operated, or legally-protected software. This repository is a study aggregation, not a disclosure.
+    - **Intended for private servers only.** This tool is designed for use on private learning and testing environments operated by hobbyists. The author does not condone, encourage, or support using this software in violation of any live game service's Terms of Service or applicable laws.
 
-    - **Use at your own risk.** The author assumes **no liability** for any consequences resulting from the use of this software, including but not limited to account bans, data loss, legal action, or any other damages — direct or indirect.
-    - This project is intended for **educational and testing purposes only** on private servers. The author does not condone or encourage the use of this tool in violation of any game's Terms of Service or applicable laws.
-    - The author is **not responsible** for how others choose to use this software and **disclaims all legal responsibility** arising from its distribution or use.
-    - No support or maintenance is guaranteed. The author may update or discontinue this project at any time without notice.
-    - By downloading or using this software, you acknowledge that you have read, understood, and agreed to this disclaimer.
+!!! warning "No Warranty & No Liability"
+    This software is provided **as-is, with no warranty of any kind**, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+    - **Use at your own risk.** The author assumes **no liability** for any consequences resulting from the use of this software, including but not limited to account actions, data loss, legal claims, or any other damages — direct or indirect.
+    - The author is **not responsible** for how others choose to use this software and **disclaims all legal responsibility** arising from its distribution or use by third parties.
+    - No support or maintenance is guaranteed. The author may update, archive, or discontinue this project at any time without notice.
+    - By downloading, building, or using this software, you acknowledge that you have read, understood, and agreed to this notice in full.
 
 ---
 
